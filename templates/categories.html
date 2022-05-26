@@ -35,24 +35,25 @@
             <ul class="topnav topnav_mobile_show">
               <button class="header__btn_close-topnav header__btn"><span class="icon-menu-close"></span></button>
               <li class="topnav__item">
-                <a href="/" class="topnav__link">Home</a>
+                <a href="home" class="topnav__link">Home</a>
               </li>
               <li class="topnav__item">
                 <a href="categories" class="topnav__link">Categories</a>
               </li>
+              <!-- <li class="topnav__item">
+                <a href="#" class="topnav__link">Favourites</a>
+              </li> -->
               <li class="topnav__item">
-                <a href="#" class="topnav__link">WatchList</a>
-              </li>
-              <li class="topnav__item">
-                <a href="register" class="topnav__link">Login</a>
-              </li>
-              <li class="topnav__item">
-                <a href="signup" class="topnav__link">SignUp</a>
+                <a href="frontpage" class="topnav__link">SignOut</a>
               </li>
               <li class="topnav__item">
                 <input type="checkbox" class="toggle-button"> 
               
             </li>
+              
+                
+              
+            
               
               
 
@@ -95,572 +96,55 @@
       </center>
     </div>
 
-    <div class="results">
-      <center>
-        <h2 id="name" class="text-uppercase ">Comedy Hits</h2>
-        <div class="container">
-          <div class="popcard">
-            <!-- <div
-              class="card"
-              style="width: 15rem"
-              title="IRON MAN"
-              onclick="recommendcard(this)"
-            >
-              <div class="imghvr">
-                <img
-                  class="card-img-top"
-                  height="360"
-                  width="240"
-                  alt="IRON MAN - poster"
-                  src="https://image.tmdb.org/t/p/original/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
-                />
-                <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
+    <!-- <div>
+        <ul>
+            <li>
+                <a href="/comedy">COMEDY HITS</a>
+            </li>
+            <li>
+                <a href="/romance">ROMANTIC HITS</a>
+            </li>
+            <li>
+                <a href="/thriller">THRILLER HITS</a>
+            </li>
+            <li>
+                <a href="/horror">HORROR HITS</a>
+            </li>
+            <li>
+                <a href="/sciencefiction">SCIENCE FICTION HITS</a>
+            </li>
+        </ul>
     </div> -->
-    <!-- <div class="card" style="width: 15rem" title="INTERSTELLAR" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="INTERSTELLAR - poster" src="https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div> -->
-    <div class="card" style="width: 15rem" title="THE GRAND BUDAPEST HOTEL" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="DARK KNIGHT- poster" src="https://image.tmdb.org/t/p/original/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg" />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div>
-    <div class="card" style="width: 15rem" title="MODERN TIMES" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="BACK TO THE FUTURE - poster" src="https://image.tmdb.org/t/p/original/7uoiKOEjxBBW0AgDGQWrlfGQ90w.jpg" />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div>
-    <div class="card" style="width: 15rem" title="DEADPOOL" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="FIGHT CLUB - poster" src="https://image.tmdb.org/t/p/original/fSRb7vyIP8rQpL0I47P3qUsEKX3.jpg" />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div>
-    <div class="card" style="width: 15rem" title="THE WOLF OF WALL STREET" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="LORD OF THE RINGS - poster" src="https://image.tmdb.org/t/p/original/pWHf4khOloNVfCxscsXFj3jj6gP.jpg" />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div>
-    <div class="card" style="width: 15rem" title="INSIDE OUT" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="THE EMPIRE STRIKES BACK - poster" src="https://image.tmdb.org/t/p/original/lRHE0vzf3oYJrhbsHXjIkF4Tl5A.jpg" />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div>
-    <!-- <div class="card" style="width: 15rem" title="SHAWSHANK REDEMPTION" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="SHAWSHANK REDEMPTION - poster" src="https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div>
-    <div class="card" style="width: 15rem" title="STAR WARS" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="STAR WARS - poster" src="https://image.tmdb.org/t/p/original/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg" />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div>
-    <div class="card" style="width: 15rem" title="FOREST GUMP" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt="FOREST GUMP- poster" src="https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg" />
-            <figcaption class="fig">
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div>
-    <div class="card" style="width: 15rem" title=" THE GODFATHER" onclick="recommendcard(this)">
-        <div class="imghvr">
-            <img class="card-img-top" height="360" width="240" alt=" THE GODFATHER - poster" src="https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg
-                <button class="card-btn btn btn-danger">Click Me</button>
-            </figcaption>
-        </div>
-    </div> -->
-    </div>
-    </div>
-    </center>
-    </div>
-    <div class="results">
-        <center>
-          <h2 id="name" class="text-uppercase ">ROMANTIC HITS</h2>
-          <div class="container">
-            <div class="popcard">
-              <!-- <div
-                class="card"
-                style="width: 15rem"
-                title="IRON MAN"
-                onclick="recommendcard(this)"
-              >
-                <div class="imghvr">
-                  <img
-                    class="card-img-top"
-                    height="360"
-                    width="240"
-                    alt="IRON MAN - poster"
-                    src="https://image.tmdb.org/t/p/original/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
-                  />
-                  <figcaption class="fig">
-                    <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <!-- <div class="card" style="width: 15rem" title="INTERSTELLAR" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="INTERSTELLAR - poster" src="https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <div class="card" style="width: 15rem" title="SOME LIKE IT HOT" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="DARK KNIGHT- poster" src="https://image.tmdb.org/t/p/original/hVIKyTK13AvOGv7ICmJjK44DTzp.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="THE APARTMENT" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="BACK TO THE FUTURE - poster" src="https://image.tmdb.org/t/p/original/tIZN5Lpd8MWFKHXDRIXTjlSA22L.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="TITANIC" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="FIGHT CLUB - poster" src="https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="SILVER LININGS PLAYBOOK" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="LORD OF THE RINGS - poster" src="https://image.tmdb.org/t/p/original/y7iOVneBvITlBdhy6tVqXVOa1Js.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="MALEFICENT" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="THE EMPIRE STRIKES BACK - poster" src="https://image.tmdb.org/t/p/original/ik8PugpL41s137RAWEGTAWu0dPo.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <!-- <div class="card" style="width: 15rem" title="SHAWSHANK REDEMPTION" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="SHAWSHANK REDEMPTION - poster" src="https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="STAR WARS" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="STAR WARS - poster" src="https://image.tmdb.org/t/p/original/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="FOREST GUMP" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="FOREST GUMP- poster" src="https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title=" THE GODFATHER" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt=" THE GODFATHER - poster" src="https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      </div>
-      </div>
-      </center>
-      </div>
-      <div class="results">
-        <center>
-          <h2 id="name" class="text-uppercase ">Horror Hits</h2>
-          <div class="container">
-            <div class="popcard">
-              <!-- <div
-                class="card"
-                style="width: 15rem"
-                title="IRON MAN"
-                onclick="recommendcard(this)"
-              >
-                <div class="imghvr">
-                  <img
-                    class="card-img-top"
-                    height="360"
-                    width="240"
-                    alt="IRON MAN - poster"
-                    src="https://image.tmdb.org/t/p/original/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
-                  />
-                  <figcaption class="fig">
-                    <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <!-- <div class="card" style="width: 15rem" title="INTERSTELLAR" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="INTERSTELLAR - poster" src="https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <div class="card" style="width: 15rem" title="THE SHINING" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="DARK KNIGHT- poster" src="https://image.tmdb.org/t/p/original/b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="ALIEN UPRISING" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="BACK TO THE FUTURE - poster" src="https://image.tmdb.org/t/p/original/wLRnGzRg48AWLjIKXPL4Pd4N8Oh.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="ZOMBIELAND" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="FIGHT CLUB - poster" src="https://image.tmdb.org/t/p/original/dUkAmAyPVqubSBNRjRqCgHggZcK.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="JAWS" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="LORD OF THE RINGS - poster" src="https://image.tmdb.org/t/p/original/s2xcqSFfT6F7ZXHxowjxfG0yisT.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="SHAUN OF THE DEAD" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="THE EMPIRE STRIKES BACK - poster" src="https://image.tmdb.org/t/p/original/dgXPhzNJH8HFTBjXPB177yNx6RI.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <!-- <div class="card" style="width: 15rem" title="SHAWSHANK REDEMPTION" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="SHAWSHANK REDEMPTION - poster" src="https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="STAR WARS" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="STAR WARS - poster" src="https://image.tmdb.org/t/p/original/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="FOREST GUMP" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="FOREST GUMP- poster" src="https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title=" THE GODFATHER" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt=" THE GODFATHER - poster" src="https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      </div>
-      </div>
-      </center>
-      </div>
 
-      <div class="results">
-        <center>
-          <h2 id="name" class="text-uppercase ">Science Fiction</h2>
-          <div class="container">
-            <div class="popcard">
-              <!-- <div
-                class="card"
-                style="width: 15rem"
-                title="IRON MAN"
-                onclick="recommendcard(this)"
-              >
-                <div class="imghvr">
-                  <img
-                    class="card-img-top"
-                    height="360"
-                    width="240"
-                    alt="IRON MAN - poster"
-                    src="https://image.tmdb.org/t/p/original/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
-                  />
-                  <figcaption class="fig">
-                    <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <!-- <div class="card" style="width: 15rem" title="INTERSTELLAR" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="INTERSTELLAR - poster" src="https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <div class="card" style="width: 15rem" title="AVENGERS: AGE OF ULTRON" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="DARK KNIGHT- poster" src="https://image.tmdb.org/t/p/original/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="AVATAR" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="BACK TO THE FUTURE - poster" src="https://image.tmdb.org/t/p/original/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="GUARDIANS OF THE GALAXY VOL. 2" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="FIGHT CLUB - poster" src="https://image.tmdb.org/t/p/original/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="MAD MAX: FURY ROAD" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="LORD OF THE RINGS - poster" src="https://image.tmdb.org/t/p/original/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="CAPTAIN AMERICA: CIVIL WAR" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="THE EMPIRE STRIKES BACK - poster" src="https://image.tmdb.org/t/p/original/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <!-- <div class="card" style="width: 15rem" title="SHAWSHANK REDEMPTION" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="SHAWSHANK REDEMPTION - poster" src="https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="STAR WARS" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="STAR WARS - poster" src="https://image.tmdb.org/t/p/original/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="FOREST GUMP" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="FOREST GUMP- poster" src="https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title=" THE GODFATHER" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt=" THE GODFATHER - poster" src="https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      </div>
-      </div>
-      </center>
-      </div>
+    <div id="wrapper">
+        <h1>CATEGORIES</h1>
+      
+      
+      <div class="posts">
+          <a href="/comedy">
+            <div class="motion post">COMEDY</div>
+          </a>
+         <a href="/romance">
+            <div class="web post">ROMANCE</div>
+         </a>
+        <a href="/thriller">
+            <div class="ux post">THRILLER</div>
+        </a>
+          <a href="/horror" >
+            <div class="graphic post" id="adjust" >HORROR</div>
+          </a>
+        <a href="/sciencefiction" >
 
-      <div class="results">
-        <center>
-          <h2 id="name" class="text-uppercase ">THriller Hits</h2>
-          <div class="container">
-            <div class="popcard">
-              <!-- <div
-                class="card"
-                style="width: 15rem"
-                title="IRON MAN"
-                onclick="recommendcard(this)"
-              >
-                <div class="imghvr">
-                  <img
-                    class="card-img-top"
-                    height="360"
-                    width="240"
-                    alt="IRON MAN - poster"
-                    src="https://image.tmdb.org/t/p/original/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
-                  />
-                  <figcaption class="fig">
-                    <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <!-- <div class="card" style="width: 15rem" title="INTERSTELLAR" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="INTERSTELLAR - poster" src="https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <div class="card" style="width: 15rem" title="THE IMITATION GAME" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="DARK KNIGHT- poster" src="https://image.tmdb.org/t/p/original/zSqJ1qFq8NXFfi7JeIYMlzyR0dx.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="THE SILENCE OF THE LAMBS" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="BACK TO THE FUTURE - poster" src="https://image.tmdb.org/t/p/original/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="MEMENTO" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="FIGHT CLUB - poster" src="https://image.tmdb.org/t/p/original/yuNs09hvpHVU1cBTCAk9zxsL2oW.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="THE SHINING" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="LORD OF THE RINGS - poster" src="https://image.tmdb.org/t/p/original/b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="RESERVOIR DOGS" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="THE EMPIRE STRIKES BACK - poster" src="https://image.tmdb.org/t/p/original/AjTtJNumZyUDz33VtMlF1K8JPsE.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div
-                class="card"
-                style="width: 15rem"
-                title="IRON MAN"
-                onclick="recommendcard(this)"
-              >
-                <div class="imghvr">
-                  <img
-                    class="card-img-top"
-                    height="360"
-                    width="240"
-                    alt="IRON MAN - poster"
-                    src="https://image.tmdb.org/t/p/original/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
-                  />
-                  <figcaption class="fig">
-                    <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      <!-- <div class="card" style="width: 15rem" title="INTERSTELLAR" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="INTERSTELLAR - poster" src="https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <!-- <div class="card" style="width: 15rem" title="SHAWSHANK REDEMPTION" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="SHAWSHANK REDEMPTION - poster" src="https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="STAR WARS" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="STAR WARS - poster" src="https://image.tmdb.org/t/p/original/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title="FOREST GUMP" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt="FOREST GUMP- poster" src="https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg" />
-              <figcaption class="fig">
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div>
-      <div class="card" style="width: 15rem" title=" THE GODFATHER" onclick="recommendcard(this)">
-          <div class="imghvr">
-              <img class="card-img-top" height="360" width="240" alt=" THE GODFATHER - poster" src="https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg
-                  <button class="card-btn btn btn-danger">Click Me</button>
-              </figcaption>
-          </div>
-      </div> -->
-      </div>
-      </div>
-      </center>
-      </div>
+            <div class="web post">SCIENCE FICTION</div>
+
+        </a>
+         
+          
+        </div> 
     
-    <li><<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>></i></a></li>
+  <div class="waste">
+   
+  </div>  
     <div>
     <div class="footer">
         <ul>

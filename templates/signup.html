@@ -223,6 +223,7 @@ document.getElementById("SignUp").addEventListener('click',(e) => {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   var username = document.getElementById('username').value;
+  var isRegistered = false
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -235,10 +236,15 @@ document.getElementById("SignUp").addEventListener('click',(e) => {
           email: email,
           password:password
       })
+      .then(() => {
+    window.location='register'
+})
 
       alert('user created!');
+      // window.location='register'
       // ...
     })
+
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -281,6 +287,7 @@ onAuthStateChanged(auth, (user) => {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
+
     //bla bla bla
     // ...
   } else {
@@ -304,6 +311,7 @@ onAuthStateChanged(auth, (user) => {
 //    });
 
 // });
+
 
 </script>
 

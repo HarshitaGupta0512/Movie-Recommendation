@@ -76,6 +76,9 @@ def get_suggestions():
 app = Flask(__name__)
 
 @app.route('/')
+def mainpage():
+    return redirect("frontpage")
+
 # def index():
 #   if('user' in session):
 #       return 'Hi,{}'.format(session['user'])
@@ -107,10 +110,36 @@ def categories():
 def signup():
     suggestions = get_suggestions()
     return render_template('signup.html',suggestions=suggestions)
+
+
+
+
+
+
 @app.route("/frontpage")
 def frontpage():
     suggestions = get_suggestions()
     return render_template('frontpage.html',suggestions=suggestions)
+@app.route("/comedy")
+def comedy():
+    suggestions = get_suggestions()
+    return render_template('comedy.html',suggestions=suggestions)
+@app.route("/romance")
+def romance():
+    suggestions = get_suggestions()
+    return render_template('romance.html',suggestions=suggestions)
+@app.route("/horror")
+def horror():
+    suggestions = get_suggestions()
+    return render_template('horror.html',suggestions=suggestions)
+@app.route("/thriller")
+def thriller():
+    suggestions = get_suggestions()
+    return render_template('thriller.html',suggestions=suggestions)
+@app.route("/sciencefiction")
+def sciencefiction():
+    suggestions = get_suggestions()
+    return render_template('sciencefiction.html',suggestions=suggestions)
 
 
 
