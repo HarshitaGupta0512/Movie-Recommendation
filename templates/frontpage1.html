@@ -1,85 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Box</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
+   <style>
+     :root {
+	--transparent-grey: rgba(0,0,0,0.5); 
+}
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='index/css'>
-  <link href="/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link href="css/hover.css" rel="stylesheet" media="all">
-  <link href="/css/style.css" rel="stylesheet">
+/* Font for text */
+body { 
+	font-family: "Helvetic Neue", Sans-serif; 
+}
+
+/* Width of carousel */
+#window, #slide-container {
+ 	width: 800px;
+  float: right;
+}
+
+/* Height of carousel */
+#slide-container {
+	height: 500px;
+	overflow: hidden; 
+	position: relative; 
+}
+
+.slide {
+	width: 100%; 
+	min-height: 200px; 
+}
+
+.slides {
+	display: block; 
   
+}
+
+/* Style of arrows */
+.arrow {
+	color: white; 
+	font-size: 26px; 
+	position: absolute; 
+	top: 50%; 
+	transform: translate(0%, -50%); 
+	padding: 16px; 
+	background-color: rgba(0,0,0,0); 
+	transition: background-color 0.3s ease; 
+}
+
+.arrow:hover {
+	cursor: pointer;
+	background-color: var(--transparent-grey); 
+}
+
+#next {
+	left: 100%; 
+	transform: translate(-100%, -50%); 
+	border-radius: 4px 0px 0px 4px; 
+}
+
+#previous {
+	border-radius: 0px 4px 4px 0px; 
+}
+
+#text-bar {
+	background-color: var(--transparent-grey);
+	width: 100%;
+	height: 36px; 
+	position: absolute; 
+	top: 100%;
+	transform: translate(0%, -100%);  
+	text-align: center; 
+	height: 36px;
+  line-height: 36px;
+}
+
+#place {
+	padding: 0px;
+	margin: 0px; 
+	color: white;
+	position: relative;
+	display: inline-block;
+}
+
+#dotsContainer {
+	width: 100%;
+	height: 20px; 
+	text-align: center; 
+}
+
+.dots {
+	width: 8px;
+	height: 8px;
+	background-color: rgba(0,0,0,0.2); 
+	border-radius: 100%; 
+	display: inline-block; 
+	margin: 8px 2px; 
+}
+
+.dots:hover {
+	cursor: pointer; 
+	background-color: rgba(0,0,0,0.4);
+}
+
+.activeDot {
+	background-color: rgba(0,0,0,0.6); 
+}
+   </style>
 
 </head>
+<body id="formatting">
+ <!-- <h6 style="font-family: Arial, Helvetica, sans-serif;">SEE WHAT IS NEXT FOR YOU</h6>
+ <h4 style>Let's explore the world of movies and hop inside?What are you waiting for </h4>
+ <a class="btn btn-primary" target="_blank" href="{{trailerURL}}" role="button">GET STARTED </a> -->
+  <div>
+    <header class="header">
+        <a href="#" class="logo"><img src="static\mbox-logo.png" alt="" style="width:90px" ></a>
+        <button class="header_btn_open-topnav header_btn"><span class="icon-menu-open"></span></button>
+        <ul class="topnav topnav_mobile_show">
+          <button class="header_btn_close-topnav header_btn"><span class="icon-menu-close"></span></button>
+          <li class="topnav__item">
+            <a href="register" class="topnav__link">Login</a>
+          </li>
+          <li class="topnav__item">
+            <a href="signup" class="topnav__link">SignUp</a>
+          </li>
+         
+          
 
-<body>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        </ul>
+      </header>
+      
+      
+</div>
 
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+<div id="window">
+	<div id="slide-container">
+		<div class="slides">
+      
+<!-- First image --> 
+			<img class="slide" src="static\Fpimage1.jpeg"> 
+		</div>
+    
+<!-- Second image --> 
+		<div class="slides">
+			<img class="slide" src="static\Fpimage2.jpeg"> 
+		</div>
+    
+ <!-- Third image --> 
+    <div class="slides">
+			<img class="slide" src="static\Fpimage3.jpeg"> 
+		</div>
+		<a id="previous" class="arrow">&#10094</a>
+		<a id="next" class="arrow">&#10095</a>
+		<div id="text-bar">
+			<p id="place"></p>
+		</div>
+	</div>
+	<div id="dotsContainer"></div>
+</div>
 
-        <div class="carousel-inner" role="listbox">
+<script>
+var index = 0; 
+var locations = ["ENTERTAINMENT", "ENTERTAINMENT", "ENTERTAINMENT"]
 
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="carousel-background"><img src="static\exta.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>handShake</span></h2>
-                <i><h4 class="animate__animated animate__fadeInUp">where ideas meet investments</h4></i>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
+var slides = document.getElementsByClassName("slides"); 
+var nextArrow = document.getElementById("next");
 
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="carousel-background"><img src="static\exta.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Are you a startup?</h2>
-                <p class="animate__animated animate__fadeInUp">From finding investors to building your team, from spreading your idea to learning about your competition, we've got you covered. Welcome to handShake, partner!</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
+var previousArrow = document.getElementById("previous");
 
-          <!-- Slide 3 -->
-          <div class="carousel-item">
-            <div class="carousel-background"><img src="static\exta.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Are you an Investor?</h2>
-                <p class="animate__animated animate__fadeInUp">Looking to invest in budding startups or diversifying your portfolio or randomly searching the startup space? You are at the right place. Welcome to handShake, partner! </p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
+var place = document.getElementById("place");
 
-        </div>
+var dotsContainer = document.getElementById("dotsContainer");
 
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-double-left" aria-hidden="true"></span>
-        </a>
+var dotArray = document.getElementsByClassName("dots"); 
 
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-double-right" aria-hidden="true"></span>
-        </a>
+createDots(); 
+showSlides(index); 
 
-      </div>
-    </div>
-  </section><!-- End Hero -->
+function createDots() {
+	for (i=0; i<slides.length; i++) {
+	var dot = document.createElement("span");
+	dot.className = "dots"; 
+	dotsContainer.appendChild(dot); 
+	}
+}
+
+function showSlides(x) {
+	if (x > slides.length-1) {
+		index = 0; 
+	}
+	if (x < 0) {
+		index = slides.length-1; 
+	}
+	for (i=0; i < slides.length; i++) {
+		slides[i].style.display = "none"; 
+		dotArray[i].className = "dots";  
+	}
+	
+	slides[index].style.display = "block";
+	dotArray[index].className += " activeDot"; 
+	place.innerHTML = locations[index]; 
+}
+
+nextArrow.onclick = function() {
+	index += 1; 
+	showSlides(index); 
+} 
+
+previousArrow.onclick = function() {
+	index -= 1; 
+	showSlides(index); 
+} 
+
+dotArray[0].onclick = showSlides(1); 
+
+</script>
+</body>
+</html>

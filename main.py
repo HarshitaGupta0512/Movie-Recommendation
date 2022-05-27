@@ -1,8 +1,9 @@
 import numpy as np
 import pandas as pd
-from flask import Flask, render_template, request,redirect
+from flask import Flask, render_template, request,redirect,jsonify
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from flask_table import Table, Col
 import json
 import bs4 as bs
 import urllib.request
@@ -54,46 +55,11 @@ def convert_to_list(my_list):
 def get_suggestions():
     data = pd.read_csv('main_data.csv')
     return list(data['movie_title'].str.capitalize())
-
-
-# firebaseConfig = {
-#     # //yout config code
-#     apiKey: "AIzaSyBpJ19yUGGEBHShU3DUBknVI0zsMDa5HFQ",
-#     authDomain: "authentication-of-users-app.firebaseapp.com",
-#     databaseURL: "https://authentication-of-users-app-default-rtdb.firebaseio.com",
-#     projectId: "authentication-of-users-app",
-#     storageBucket: "authentication-of-users-app.appspot.com",
-#     messagingSenderId: "516976118680",
-#     appId: "1:516976118680:web:edaafcb483a3320a2139ed",
-#     measurementId: "G-TF17VRKR37"
-#   };
-
-# firebase=pyrebase.initialize_app(firebaseConfig)
-# auth=firebase.auth()
-# app.secret_key='secret'
-
-
 app = Flask(__name__)
 
 @app.route('/')
 def mainpage():
-    return redirect("frontpage")
-
-# def index():
-#   if('user' in session):
-#       return 'Hi,{}'.format(session['user'])
-#   if request.method=='POST':
-#       email=request.form.get('email')
-#       password=request.form.get('password')
-#       try:
-#           user=auth.sign_in_with_email_and_password(email,password)
-#           session['user']=email
-#       except:
-#           return 'failed to login'
-#   return render_template("register.html")
-          
-  
-
+    return redirect("frontpage")          
 @app.route("/home")
 def home():
     suggestions = get_suggestions()
@@ -110,12 +76,6 @@ def categories():
 def signup():
     suggestions = get_suggestions()
     return render_template('signup.html',suggestions=suggestions)
-
-
-
-
-
-
 @app.route("/frontpage")
 def frontpage():
     suggestions = get_suggestions()
@@ -142,14 +102,15 @@ def sciencefiction():
     return render_template('sciencefiction.html',suggestions=suggestions)
 
 
-
-
-
-
 @app.route("/genre")
 def genre():
     suggestions = get_suggestions()
     return render_template('genre.html',suggestions=suggestions)
+@app.route("/welcome")
+def welcome():
+    suggestions = get_suggestions()
+    return render_template('welcome.html',suggestions=suggestions)
+
 
 
 @app.route("/similarity",methods=["POST"])
@@ -222,24 +183,111 @@ def recommend():
     soup = bs.BeautifulSoup(sauce,'lxml')
     soup_result = soup.find_all("div",{"class":"text show-more__control"})
 
-    reviews_list = [] # list of reviews
-    reviews_status = [] # list of comments (good or bad)
-    for reviews in soup_result:
-        if reviews.string:
-            reviews_list.append(reviews.string)
-            # passing the review to our model
-            movie_review_list = np.array([reviews.string])
-            movie_vector = vectorizer.transform(movie_review_list)
-            pred = clf.predict(movie_vector)
-            reviews_status.append('Good' if pred else 'Bad')
+    # reviews_list = [] # list of reviews
+    # reviews_status = [] # list of comments (good or bad)
+    # for reviews in soup_result:
+    #     if reviews.string:
+    #         reviews_list.append(reviews.string)
+    #         # passing the review to our model
+    #         movie_review_list = np.array([reviews.string])
+    #         movie_vector = vectorizer.transform(movie_review_list)
+    #         pred = clf.predict(movie_vector)
+    #         reviews_status.append('Good' if pred else 'Bad')
 
-    # combining reviews and comments into a dictionary
-    movie_reviews = {reviews_list[i]: reviews_status[i] for i in range(len(reviews_list))}     
+    # # combining reviews and comments into a dictionary
+    # movie_reviews = {reviews_list[i]: reviews_status[i] for i in range(len(reviews_list))}     
 
     # passing all the data to the html file
     return render_template('recommend.html',title=title,poster=poster,overview=overview,vote_average=vote_average,
         vote_count=vote_count,release_date=release_date,runtime=runtime,status=status,genres=genres,
-        movie_cards=movie_cards,reviews=movie_reviews,casts=casts,cast_details=cast_details,trailerURL=trailerURL)
+        movie_cards=movie_cards,casts=casts,cast_details=cast_details,trailerURL=trailerURL)
+class Results(Table):
+    id = Col('Id', show=False)
+    title = Col('Recommendation List')
+
+
+#Rating Page
+@app.route("/rating", methods=["GET", "POST"])
+def rating():
+    if request.method=="POST":
+        return render_template('recommendation.html')
+    return render_template('rating.html')
+
+#Results Page
+@app.route("/recommendation", methods=["GET", "POST"])
+def recommendation():
+    if request.method == 'POST':
+        #reading the original dataset
+        movies = pd.read_csv('movies.csv')
+
+        #separating genres for each movie
+        movies = pd.concat([movies, movies.genres.str.get_dummies(sep='|')], axis=1)
+
+        #dropping variables to have a dummy 1-0 matrix of movies and their genres
+        ## IMAX is not a genre, it is a specific method of filming a movie, thus removed
+        ###we do not need movieId for this project
+        categories = movies.drop(['title', 'genres', 'IMAX', 'movieId'], axis=1)
+
+        #initializing user preference list which will contain user ratings
+        preferences = []
+
+        #reading rating values given by user in the front-end
+        Action = request.form.get('Action')
+        Adventure = request.form.get('Adventure')
+        Animation = request.form.get('Animation')
+        Children = request.form.get('Children')
+        Comedy = request.form.get('Comedy')
+        Crime = request.form.get('Crime')
+        Documentary = request.form.get('Documentary')
+        Drama = request.form.get('Drama')
+        Fantasy = request.form.get('Fantasy')
+        FilmNoir = request.form.get('FilmNoir')
+        Horror = request.form.get('Horror')
+        Musical = request.form.get('Musical')
+        Mystery = request.form.get('Mystery')
+        Romance = request.form.get('Romance')
+        SciFi = request.form.get('SciFi')
+        Thriller = request.form.get('Thriller')
+        War = request.form.get('War')
+        Western = request.form.get('Western')
+
+        #inserting each rating in a specific position based on the movie-genre matrix
+        preferences.insert(0, int(Action))
+        preferences.insert(1,int(Adventure))
+        preferences.insert(2,int(Animation))
+        preferences.insert(3,int(Children))
+        preferences.insert(4,int(Comedy))
+        preferences.insert(5,int(Crime))
+        preferences.insert(6,int(Documentary))
+        preferences.insert(7,int(Drama))
+        preferences.insert(8,int(Fantasy))
+        preferences.insert(9,int(FilmNoir))
+        preferences.insert(10,int(Horror))
+        preferences.insert(11,int(Musical))
+        preferences.insert(12,int(Mystery))
+        preferences.insert(13,int(Romance))
+        preferences.insert(14,int(SciFi))
+        preferences.insert(15,int(War))
+        preferences.insert(16,int(Thriller))
+        preferences.insert(17,int(Western))
+
+        #This funtion will get each movie score based on user's ratings through dot product
+        def get_score(a, b):
+           return np.dot(a, b)
+
+        #Generating recommendations based on top score movies
+        def recommendations(X, n_recommendations):
+            movies['score'] = get_score(categories, preferences)
+            return movies.sort_values(by=['score'], ascending=False)['title'][:n_recommendations]
+
+        #printing top-20 recommendations
+        output= recommendations(preferences, 20)
+        table = Results(output)
+        table.border = True
+        return render_template('recommendation.html', table=table)
+
+
+        
 
 if __name__ == '__main__':
     app.run(debug=True)
