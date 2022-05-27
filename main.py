@@ -10,12 +10,6 @@ import urllib.request
 import pickle
 
 
-
-# load the nlp model and tfidf vectorizer from disk
-# filename = 'nlp_model.pkl'
-# clf = pickle.load(open(filename, 'rb'))
-# vectorizer = pickle.load(open('tranform.pkl','rb'))
-
 def create_similarity():
     data = pd.read_csv('main_data.csv')
     # creating a count matrix
@@ -33,7 +27,7 @@ def rcmd(m):
     except:
         data, similarity = create_similarity()
     if m not in data['movie_title'].unique():
-        return('Sorry! The movie you requested is not in our database. Please check the spelling or try with some other movies')
+        return('Sorry! The movie you requested is not in our dataset. Please check the spelling or try with some other movies')
     else:
         i = data.loc[data['movie_title']==m].index[0]
         lst = list(enumerate(similarity[i]))

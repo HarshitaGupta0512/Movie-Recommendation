@@ -2,79 +2,40 @@
     <head>
         <html lang="en" dir="ltr">
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" /> -->
         <title>Recommendations</title>
         <style type="text/css">    
           body
-          {
+          { 
             padding: 0px;
 
-            } 
-          #changes{
-            background: url("image.jpg");
-            background-repeat: no-repeat;
-          }
+        }
+        .changes{
+          /* background-color:;
+          /* background-image: url('image.jpg'); */
+          /* background-color #000000;
+background-image linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+          /* background: url("image.jpg"); */ */
+          /* background-image: linear-gradient(180deg, red, yellow); */
+          /* background: repeating-linear-gradient(white, black 15px, white 30px); */
+          background-color: #ffeaa7;
+background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%); */
+background-color: #ffa69e;
+background-image: linear-gradient(315deg, #ffa69e 0%, #5d4954 74%);
+        }
+        
+          
         </style>  
     </head>
      
-    <body  id="changes">
-        <header class="header">
-            <a href="#" class="logo"><img src="static\mbox-logo.png" alt="" style="width:90px" ></a>
-            <button class="header__btn_open-topnav header__btn"><span class="icon-menu-open"></span></button>
-            <ul class="topnav topnav_mobile_show">
-              <button class="header__btn_close-topnav header__btn"><span class="icon-menu-close"></span></button>
-              <li class="topnav__item">
-                <a href="home" class="topnav__link">Home</a>
-              </li>
-              <li class="topnav__item">
-                <a href="categories" class="topnav__link">Categories</a>
-              </li>
-              <!-- <li class="topnav__item">
-                <a href="#" class="topnav__link">Favourites</a>
-              </li> -->
-              <li class="topnav__item">
-                <a href="rating" class="topnav__link">Rate</a>
-              </li>
-              
-              <li class="topnav__item">
-                <a href="frontpage" class="topnav__link">SignOut</a>
-              </li>
-              <!-- <li class="topnav__item" >
-                <a>Welcome></a>
-              </li> -->
-              
-<!-- 
-              <li class="topnav__item">
-                  <input type="checkbox" class="toggle-button"> 
-                
-              </li> -->
-              
-              
-
-            </ul>
-          </header>
-          <img  id="img" src="cartoon.png">
-
+     <body  class="changes"> 
         
-            <h1><font color="midnightblue"><strong>Here are the top-20 movies that you'll most probably like:</strong></font></h1>
+         
+          <a class="btn btn-primary" target="_blank" href="home" role="button" style="color:chocolate" margin-top="20px"><center>BACK TO HOME</center></a>
+        
+            <h1><font color="midnightblue"><strong><center>Top Recommendations For You on Your Genre Taste:</center></strong></font></h1>
             
-            <p>{{ table }}</p>
+            <p> <center>{{ table }}</center></p>
         
-        <li><<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>></i></a></li>
-    <div>
-    <div class="footer">
-        <ul>
-          <li><a href="https://acehacker.com/microsoft/engage2022/" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
-          <li><a href="https://acehacker.com/microsoft/engage2022/" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
-          <li><a href="https://acehacker.com/microsoft/engage2022//" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
-          <li><a href="https://acehacker.com/microsoft/engage2022/" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
-          <li><a href="https://acehacker.com/microsoft/engage2022/" target="_blank"><i class="fa fa-codepen fa-fw"></i></a></li>
-          
-          
-
-        </ul>
-        <p>Made with <i class="fa fa-heart fa-fw fa-lg"></i> by Harshita Gupta</p>
-      </div>
-    </div>
     </body>
 </html>

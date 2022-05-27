@@ -8,6 +8,11 @@
           body
           { color: antiquewhite!important;
                     } 
+          #update{
+            margin-bottom: 20px;
+            width: 70%;
+            margin-right: 40px;
+          }
         </style>
     </head>
 
@@ -81,7 +86,7 @@
             <div>
             <p> <strong><font size="4" color="white">What is your rating to <font color="Maroon">Animation </font>genre?</strong><br/> </p>
 
-                <input type="radio" name="Animation" value="0" checked><br>
+                <input type="radio" name="Animation" value="0" checked>I hate this genre!<br>
                 <input type="radio" name="Animation" value="1" > 1<br>
                 <input type="radio" name="Animation" value="2"> 2<br>
                 <input type="radio" name="Animation" value="3"> 3<br>
@@ -92,7 +97,7 @@
             <div>
             <p> <strong><font size="4" color="white">What is your rating to <font color="Maroon">Children's </font>genre?</strong><br/></p>
 
-                <input type="radio" name="Children" value="0" checked><br>
+                <input type="radio" name="Children" value="0" checked>I hate this genre!<br>
                 <input type="radio" name="Children" value="1" > 1<br>
                 <input type="radio" name="Children" value="2"> 2<br>
                 <input type="radio" name="Children" value="3"> 3<br>
@@ -259,11 +264,12 @@
             <div>
             <!-- <h3><font color="midnightblue">If you're sure about these ratings, go ahead and click this button!</h3> -->
             </div>
-            <button type="submit" class="btn btn-success"><font color="navy"><strong>Get Recommendations!</strong></button>
+            <button type="submit" class="btn btn-success" id="update"><font color="navy"><strong>Get Recommendations!</strong></button>
 
             
 
         </form>
+        
 
         {% endblock %}
 
