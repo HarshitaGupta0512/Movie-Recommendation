@@ -54,7 +54,8 @@
     <body id="welcomepage">
         {% extends "template.html" %}
         {% block content %}
-        <h1 style="text-align:center;"><font color="gold"> ** MOVIE BOX **</h1>
+        /* <h1 style="text-align:center;"><font color="gold"> ** MOVIE BOX **</h1> */
+			<a href="#" class="logo"><img src="static\mbox-logo.png" alt="" style="width:90px" ></a>
 
 	        <div id="banner">
 	        <form action="{{ url_for('rating') }}" method="GET">
