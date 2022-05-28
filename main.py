@@ -94,17 +94,10 @@ def thriller():
 def sciencefiction():
     suggestions = get_suggestions()
     return render_template('sciencefiction.html',suggestions=suggestions)
-
-
 @app.route("/genre")
 def genre():
     suggestions = get_suggestions()
     return render_template('genre.html',suggestions=suggestions)
-@app.route("/welcome")
-def welcome():
-    suggestions = get_suggestions()
-    return render_template('welcome.html',suggestions=suggestions)
-
 
 
 @app.route("/similarity",methods=["POST"])
@@ -177,19 +170,7 @@ def recommend():
     soup = bs.BeautifulSoup(sauce,'lxml')
     soup_result = soup.find_all("div",{"class":"text show-more__control"})
 
-    # reviews_list = [] # list of reviews
-    # reviews_status = [] # list of comments (good or bad)
-    # for reviews in soup_result:
-    #     if reviews.string:
-    #         reviews_list.append(reviews.string)
-    #         # passing the review to our model
-    #         movie_review_list = np.array([reviews.string])
-    #         movie_vector = vectorizer.transform(movie_review_list)
-    #         pred = clf.predict(movie_vector)
-    #         reviews_status.append('Good' if pred else 'Bad')
-
-    # # combining reviews and comments into a dictionary
-    # movie_reviews = {reviews_list[i]: reviews_status[i] for i in range(len(reviews_list))}     
+        
 
     # passing all the data to the html file
     return render_template('recommend.html',title=title,poster=poster,overview=overview,vote_average=vote_average,
@@ -219,7 +200,7 @@ def recommendation():
 
         #dropping variables to have a dummy 1-0 matrix of movies and their genres
         ## IMAX is not a genre, it is a specific method of filming a movie, thus removed
-        ###we do not need movieId for this project
+       
         categories = movies.drop(['title', 'genres', 'IMAX', 'movieId'], axis=1)
 
         #initializing user preference list which will contain user ratings

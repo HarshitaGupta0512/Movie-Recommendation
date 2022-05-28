@@ -39,7 +39,6 @@
             </div>
             <div id="details">
                 <br/>
-                <!-- <h6 id="title" >TITLE: &nbsp;{{title}}</h6> -->
                 <h6 id="overview" style="max-width: 85%"> {{overview}}</h6>
                 <h6 id="vote_average" >RATING: &nbsp;<span>{{vote_average}}</span>/10 ({{vote_count}} votes)</h6>
                 <div class="format">
@@ -51,8 +50,7 @@
                 
                 <a class="btn btn-primary" target="_blank" href="{{trailerURL}}" role="button">WATCH TRAILER</a>
                 
-                <!-- <a class="btn btn-primary" target="_blank" href="/" role="button" style="margin: left 70px;">ADD TO FAVOURITE</a> -->
-                <!-- <iframe width="956" height="538" src="{{trailerURL}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                
                 
             </div>
         </div>
@@ -112,38 +110,7 @@
     </div>
     {% endif %}
 
-    <!-- <center>
-        {% if reviews %}
-        <h2 class="user">USER REVIEWS</h2>
-        <div class="col-md-12" style="margin: 0 auto; margin-top:25px;">
-            <table class="table table-bordered" bordercolor="white" style="color:white">
-                <thead>
-                    <tr>
-                        <th class="text-center" scope="col" style="width: 75%">Comments</th>
-                        <th class="text-center" scope="col">Sentiments</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    {% for review, status in reviews.items() if not reviews.hidden %}
-                    <tr style="background-color:#e5091485;">
-                        <td>{{review}}</td>
-                        <td>
-                            <center>
-                                {{status}} : {% if status =='Good' %} &#128515; {% else %} &#128534; {% endif %}
-                            </center>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        {% else %}
-        <div style="color:white;">
-            <h1 style="color:white"> This movie is not released yet. Stay tuned! </h1>
-        </div>
-        {% endif %}
-    </center> -->
+    
 
     {% if movie_cards|length > 1 %}
 
@@ -151,7 +118,6 @@
     <div class="movie" >
         <center>
             <h3>RECOMMENDED MOVIES FOR YOU</h3>
-            <!-- <h5>(Click any of the movies to get recommendation)</h5> -->
         </center>
     </div>
 

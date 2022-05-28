@@ -32,12 +32,10 @@ body {
   font-size: 12px;
   line-height: 1.3;
   font-family: Arial, Helvetica, Sans-Serif;
-  /* color: #ccc;
-  background: url('/static/css/images/body-bg.gif'); */
+ 
   
       color: var(--text-color);
-      /* background-color: var(--bg-color); */
-      /* background: url(var(--url)); */
+      
       background: var(--url);
       
     
@@ -260,10 +258,6 @@ body {
 }
 
 
-
-
-/* movie css */
-
 .movie {
     color: var(--text-color);
     margin-left: auto;
@@ -292,8 +286,7 @@ body {
 
 #content {
     
-    /* background-image: url("image.jpg"); */
-    /* background-color: white; */
+    
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -642,7 +635,7 @@ h6 {
 
   /* -------------------------------------------------------------------------------------- */
   :root {
-    /* --bg-color:url("image.jpg"); */
+    
     --text-color:white ;
     --url:url("image.jpg");
 
@@ -717,10 +710,9 @@ h6 {
   }
   #formatting{
     
-    /* background-image: url("frontpageimage.jpeg")!important; */
+    
     background: #ffffff url("frontpageimage.jpeg") no-repeat center center;
     background-repeat: no-repeat;
-    /* background-position: center; */
     background-attachment: fixed;
     background-size: cover;
     opacity: 0.8;
