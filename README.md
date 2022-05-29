@@ -15,7 +15,9 @@ Based on this, we can distinguish between three algorithms used in recommender s
 -   *Collaborative filtering* systems, which are based on user-item interactions.
 -   *Hybrid systems*, which combine both types of information
 
-**Movie Box** is one such recommendation system built in the 4 weeks mentorship journey aiming to provide the recommendations to user using the characteristics of the movie he /she searches or clicks or give the rating
+**Movie Box** is one such recommendation system built in the 4 weeks mentorship journey aiming to provide the recommendations to user using the characteristics of the movie he /she searches or clicks or give the rating.
+
+> **Deployed Link:** https://engage-recommendation.herokuapp.com/frontpage
 
 **Algorithms used in my project**
 
@@ -24,84 +26,77 @@ Based on this, we can distinguish between three algorithms used in recommender s
 
 INTERFACES:
 
-(media/0814e2a59fe2c6cd4675c55a79![WhatsApp Image 2022-05-28 at 5 22 17 PM](https://user-images.githubusercontent.com/98079342/170842246-5937a908-702c-476e-ab2b-9bb13bb14a4b.jpeg)
-6704f7.jpeg)
+![WhatsApp Image 2022-05-28 at 5 22 17 PM](https://user-images.githubusercontent.com/98079342/170842246-5937a908-702c-476e-ab2b-9bb13bb14a4b.jpeg)
 
 Clean User Interface with a simple Intuitive UI directing the new user to signup and old user to login using the signup and login buttons respectively. Get Started will redirect to signup page.
 
-![](media/90748a7963152cde2a![WhatsApp Image 2022-05-28 at 5 26 36 PM](https://user-images.githubusercontent.com/98079342/170842386-e0bc8394-41ab-41d1-91ee-ef6a9657ab03.jpeg)
-fcacc90d03f4ce.jpeg)![](media/63f0021fcc1801e673c8ce7106![WhatsApp Image 2022-05-28 at 5 27 26 PM](https://user-images.githubusercontent.com/98079342/170842392-704e9d7e-ca96-40e9-9b9e-05e8d22bbb7f.jpeg)
-4b26a8.jpeg)
+![WhatsApp Image 2022-05-28 at 5 26 36 PM](https://user-images.githubusercontent.com/98079342/170842386-e0bc8394-41ab-41d1-91ee-ef6a9657ab03.jpeg)
+![WhatsApp Image 2022-05-28 at 5 27 26 PM](https://user-images.githubusercontent.com/98079342/170842392-704e9d7e-ca96-40e9-9b9e-05e8d22bbb7f.jpeg)
 
 Authentication built using firebase database
 
-**![](media/53c2cba2dedee35f9819e003480![WhatsApp Image 2022-05-28 at 5 28 24 PM](https://user-images.githubusercontent.com/98079342/170842407-2032916b-4c67-40bb-ae7e-3f18b5e06662.jpeg)
-748cb.jpeg)**
+![WhatsApp Image 2022-05-28 at 5 28 24 PM](https://user-images.githubusercontent.com/98079342/170842407-2032916b-4c67-40bb-ae7e-3f18b5e06662.jpeg)
 
 **HOME PAGE**
 
 After user is logged in Home Page appears which shows some of the trending hits of the database which have been calculated using 2 factors- past user ratings of the dataset along with number of users who rated a movie (WEIGHTED MEAN AVERAGE)
 
-**![](media/b86b6e68602c084a4a106739ee2![WhatsApp Image 2022-05-28 at 5 38 26 PM](https://user-images.githubusercontent.com/98079342/170843308-a7028deb-bb8d-4700-9488-e298c6c0cf4f.jpeg)
-2d709.jpeg)
-CATEGORIES PAGE**
+![WhatsApp Image 2022-05-28 at 5 38 26 PM](https://user-images.githubusercontent.com/98079342/170843308-a7028deb-bb8d-4700-9488-e298c6c0cf4f.jpeg)
+
+**CATEGORIES PAGE**
 
 Categories showing genre of movie. User can click any genre to get the respective popular movies of that genre from the dataset
 
-![](media/c11f25ade9f7892b068f6a8526a![WhatsApp Image 2022-05-28 at 5 41 07 PM](https://user-images.githubusercontent.com/98079342/170843309-0611f8c3-2fd0-4630-9919-94d7914e1e1c.jpeg)
-6f2fd.jpeg)
+![WhatsApp Image 2022-05-28 at 5 41 07 PM](https://user-images.githubusercontent.com/98079342/170843309-0611f8c3-2fd0-4630-9919-94d7914e1e1c.jpeg)
 
 Example:   
 This page shows popular Romantic Hits when user clicks Romantic card on categories page.
 
-![](media/a0a2e6279b3576fd90d55098![WhatsApp Image 2022-05-28 at 5 46 34 PM (1)](https://user-images.githubusercontent.com/98079342/170843314-791a5d1b-7c6c-423e-86e4-162d67db0eba.jpeg)
-c1afde56.jpeg)
+![WhatsApp Image 2022-05-28 at 5 46 34 PM (1)](https://user-images.githubusercontent.com/98079342/170843314-791a5d1b-7c6c-423e-86e4-162d67db0eba.jpeg)
 
 **MOVIE PAGE**
 
 This Page shows information about the movie user search/clicks that is fetched from IMDB and TMDB along with some recommended movies which are based upon the machine learning algorithms related to movie shown above.
 
- ![](media/56dfeeb6a61c938a660ac2e![WhatsApp Image 2022-05-28 at 5 53 02 PM](https://user-images.githubusercontent.com/98079342/170843687-2e58f975-5529-4486-9308-a7bf2e4d7432.jpeg)
-e275a21f4.jpeg)
- **Rate (GENRE) PAge
+ ![WhatsApp Image 2022-05-28 at 5 53 02 PM](https://user-images.githubusercontent.com/98079342/170843687-2e58f975-5529-4486-9308-a7bf2e4d7432.jpeg)
+ 
+ **Rate (GENRE) Page**
 
 Rate (GENRE) will take you to the above page where you can rate genres from 1 to 5 based upon your interest, finally a list will be shown to you based on your choices filled.
 
-![](media/ad00da85fcbc662b0d9d![WhatsApp Image 2022-05-28 at 5 53 36 PM](https://user-images.githubusercontent.com/98079342/170843694-c7d2017c-6a91-4592-82c3-e778731793dd.jpeg)
-682e53952200.jpeg)
+![WhatsApp Image 2022-05-28 at 5 53 36 PM](https://user-images.githubusercontent.com/98079342/170843694-c7d2017c-6a91-4592-82c3-e778731793dd.jpeg)
 
 The List of Recommended Movies
+
 **FEATURES:**
 
+![WhatsApp Image 2022-05-28 at 6 13 12 PM](https://user-images.githubusercontent.com/98079342/170843708-b1b71ff0-8f95-4181-a617-a1b78d37d920.jpeg)
 
-![](media/4a208114d404e29bba505![WhatsApp Image 2022-05-28 at 6 13 12 PM](https://user-images.githubusercontent.com/98079342/170843708-b1b71ff0-8f95-4181-a617-a1b78d37d920.jpeg)
-a65d345a747.jpeg)
-
-Click me will redirect user to page where   
+**Click me will redirect user to page where   
 it will show information about the user0  
- along with its recommended movies.
+ along with its recommended movies.**
 
-![](media/682a14158b82eb35e42b03c1fc![WhatsApp Image 2022-05-28 at 6 04 00 PM (1)](https://user-images.githubusercontent.com/98079342/170843767-149121e6-9922-42e1-ac0c-9b239a73313f.jpeg)
-d74469.jpeg)
-Top Button redirects to top of the page
+![WhatsApp Image 2022-05-28 at 6 04 00 PM (1)](https://user-images.githubusercontent.com/98079342/170843767-149121e6-9922-42e1-ac0c-9b239a73313f.jpeg)
+
+**Top Button redirects to top of the page**
 
 
-![](media/b196d064900fbd88104060![WhatsApp Image 2022-05-28 at 6 00 21 PM](https://user-images.githubusercontent.com/98079342/170843772-634a765c-2a07-4959-87ee-6a96c529786f.jpeg)
-99cb787deb.jpeg)
-Auto Complete Search Box
+![WhatsApp Image 2022-05-28 at 6 00 21 PM](https://user-images.githubusercontent.com/98079342/170843772-634a765c-2a07-4959-87ee-6a96c529786f.jpeg)
 
-![](media/5a7d5610fa50a6d334abe25f285f495d.j![WhatsApp Image 2022-05-28 at 6 01 54 PM](https://user-images.githubusercontent.com/98079342/170843777-7604bc0e-7c7f-4e13-aab7-7b5b23dea7cc.jpeg)
-peg)
-Shortcut to access the search box without clicking-CTRL+B
+**Auto Complete Search Box**
 
-![](media/8ab797dad31870e5758![WhatsApp Image 2022-05-28 at 6 10 17 PM](https://user-images.githubusercontent.com/98079342/170843782-fa7ee572-82e7-4253-8b8d-42739c9dd7b7.jpeg)
-0838fa5f95c32.jpeg)
+![WhatsApp Image 2022-05-28 at 6 01 54 PM](https://user-images.githubusercontent.com/98079342/170843777-7604bc0e-7c7f-4e13-aab7-7b5b23dea7cc.jpeg)
 
-User can click the button to watch movie’s trailer if available on YouTube.
+**Shortcut to access the search box without clicking-CTRL+B**
 
-![](media/23e1741adc64583aa32![WhatsApp Image 2022-05-28 at 6 04 26 PM](https://user-images.githubusercontent.com/98079342/170843786-7100219f-5f42-46a5-b70c-36267f1c42ab.jpeg)
-d96b89e212d0b.jpeg) ![](media/c2721a7a5601610732ab6e41![WhatsApp Image 2022-05-28 at 6 04 59 PM](https://user-images.githubusercontent.com/98079342/170843789-7f9da027-cefb-4316-8fc3-157fd4b5ec64.jpeg)
-b99c10c1.jpeg)
+![WhatsApp Image 2022-05-28 at 6 10 17 PM](https://user-images.githubusercontent.com/98079342/170843782-fa7ee572-82e7-4253-8b8d-42739c9dd7b7.jpeg)
+
+
+**User can click the button to watch movie’s trailer if available on YouTube.**
+
+![WhatsApp Image 2022-05-28 at 6 04 26 PM](https://user-images.githubusercontent.com/98079342/170843786-7100219f-5f42-46a5-b70c-36267f1c42ab.jpeg)
+![WhatsApp Image 2022-05-28 at 6 04 59 PM](https://user-images.githubusercontent.com/98079342/170843789-7f9da027-cefb-4316-8fc3-157fd4b5ec64.jpeg)
+
 
 **Light/Dark mode**
 
