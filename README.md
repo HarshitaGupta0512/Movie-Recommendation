@@ -19,6 +19,7 @@ Based on this, we can distinguish between three algorithms used in recommender s
 
 > **Deployed Link:** https://engage-recommendation.herokuapp.com/frontpage
 > ```
+> LOGIN THROUGH **EMAIL AND PASSWORD**:
 > Username:harshita
 > Email:harshita@gmail.com
 > password:harshita
