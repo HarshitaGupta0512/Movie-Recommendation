@@ -17,7 +17,7 @@ Based on this, we can distinguish between three algorithms used in recommender s
 
 **Movie Box** is one such recommendation system built in the 4 weeks mentorship journey aiming to provide the recommendations to user using the characteristics of the movie he /she searches or clicks or give the rating.
 
-> **Deployed Link:** https://engage-recommendation.herokuapp.com/frontpage
+
 > ```
 > LOGIN THROUGH **EMAIL AND PASSWORD**:
 > Username:harshita
