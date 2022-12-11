@@ -25,7 +25,7 @@ Based on this, we can distinguish between three algorithms used in recommender s
 > password:harshita
 > ```
 
-> **Video Link:** https://drive.google.com/file/d/1rBTYlnOfKFmisIjy8UsqPYyQxGSQ96Ay/view?usp=sharing
+> Video Link: https://drive.google.com/file/d/1rBTYlnOfKFmisIjy8UsqPYyQxGSQ96Ay/view?usp=sharing
 
 **Algorithms used in my project**
 
