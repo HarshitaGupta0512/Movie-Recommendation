@@ -15,7 +15,7 @@ Based on this, we can distinguish between three algorithms used in recommender s
 -   *Collaborative filtering* systems, which are based on user-item interactions.
 -   *Hybrid systems*, which combine both types of information
 
-**Movie Box** is one such recommendation system built in the 4 weeks mentorship journey aiming to provide the recommendations to user using the characteristics of the movie he /she searches or clicks or give the rating.
+**Movie Box** is one such recommendation system built aims to provide the recommendations to user using the characteristics of the movie he /she searches or clicks or give the rating.
 
 
 > ```
